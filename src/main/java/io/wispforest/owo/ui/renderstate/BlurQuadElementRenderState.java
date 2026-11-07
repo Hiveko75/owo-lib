@@ -124,7 +124,7 @@ public record BlurQuadElementRenderState(
 
     public static class Uniforms {
         public static final int SIZE = new Std140SizeCalculator().putVec2().putFloat().putFloat().putFloat().get();
-        private final DynamicGpuDataStorage<Value> storage = new DynamicGpuDataStorageMapped<>("Blur Settings UBO", SIZE, 4, GpuBuffer.USAGE_UNIFORM);
+        private final DynamicGpuDataStorage<Value> storage = new DynamicGpuDataStorageMapped<>("Blur Settings UBO", SIZE, GpuBuffer.USAGE_UNIFORM, 4); // 26.3: (label, blockSize, usage, capacity)
 
         public void clear() {
             this.storage.endFrame();
