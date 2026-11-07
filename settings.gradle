@@ -9,3 +9,6 @@ pluginManagement {
 }
 
 include 'owo-sentinel'
+
+// Fixed name so Maven artifacts are published as io.wispforest:owo-lib regardless of the folder name
+rootProject.name = 'owo-lib'
