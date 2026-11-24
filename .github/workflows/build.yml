@@ -4,7 +4,9 @@
 # against bad commits.
 
 name: build
-on: [pull_request, push, workflow_dispatch]
+# Started by hand only (Actions -> Run workflow): no builds on push or pull requests.
+on:
+  workflow_dispatch:
 
 jobs:
   build:
